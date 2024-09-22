@@ -1642,7 +1642,7 @@ GameObject:
   - component: {fileID: 1079504271}
   - component: {fileID: 1079504270}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: Level_Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
