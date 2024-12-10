@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public Animator animator;
+
+    public AudioSource aud;
+
     public int Health = 3;
     private float Xinput;
     private float Yinput;
@@ -57,19 +61,31 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
         if (isdashing == true)
         {
             return;
         }
 
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movement.x = horizontalInput;
+        movement.y = verticalInput;
+
+    
 
         movement.Normalize();
 
         body.velocity = movement * ActiveMoveSpeed;
-        SpriteRenderer.flipX = body.velocity.x < 0f;
-        
+
+        if (horizontalInput != 0)
+        {
+            SpriteRenderer.flipX = horizontalInput < 0f;
+        }
+
+        animator.SetFloat("Move", Mathf.Abs(movement.x));
+
+        animator.SetFloat("yMove", Mathf.Abs(movement.y));
+
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && isSprinting == false )
         {
@@ -116,6 +132,7 @@ public class Player : MonoBehaviour
      
         if (Health == 0) 
         {
+            SceneManager.LoadScene(scenetoLoad = "Main Game");
             Debug.Log("Death");
         }
 
@@ -208,7 +225,13 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Transport4" || Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Touch");
-            SceneManager.LoadScene(scenetoLoad = "Level 4");
+            SceneManager.LoadScene(scenetoLoad = "End");
+        }
+
+        if (collision.gameObject.tag == "Win" || Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Touch");
+            SceneManager.LoadScene(scenetoLoad = "Final Boss");
         }
 
         if (collision.gameObject.tag == "Enemy")

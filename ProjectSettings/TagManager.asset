@@ -13,6 +13,7 @@ TagManager:
   - Lava
   - Enemy
   - Chest
+  - Win
   layers:
   - Default
   - TransparentFX
