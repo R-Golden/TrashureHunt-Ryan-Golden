@@ -5,11 +5,14 @@ using UnityEngine;
 public class EnemyFollow : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject enemy;
+    public int Enemyhealth = 1;
     private Transform target;
     public float speed;
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+      
     }
 
     // Update is called once per frame
@@ -17,4 +20,13 @@ public class EnemyFollow : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(enemy);
+        }
+    }
+
 }

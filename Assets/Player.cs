@@ -238,6 +238,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Hurt");
             Health -= 1;
+            
         }
     }
 }

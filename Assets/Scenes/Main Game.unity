@@ -8495,9 +8495,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1632098448917514584, guid: 4a7ac6c7947b4214cb0c74686ffb94ed, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.6015837
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632098448917514584, guid: 4a7ac6c7947b4214cb0c74686ffb94ed, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.6015837
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632098448917514584, guid: 4a7ac6c7947b4214cb0c74686ffb94ed, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.6015837
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632098448917514584, guid: 4a7ac6c7947b4214cb0c74686ffb94ed, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 81
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632098448917514584, guid: 4a7ac6c7947b4214cb0c74686ffb94ed, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 249
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185663072252259508, guid: 4a7ac6c7947b4214cb0c74686ffb94ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2468655010728599381, guid: 4a7ac6c7947b4214cb0c74686ffb94ed, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3895337869276332310, guid: 4a7ac6c7947b4214cb0c74686ffb94ed, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5138006876902018972, guid: 4a7ac6c7947b4214cb0c74686ffb94ed, type: 3}
       propertyPath: m_Pivot.x
@@ -8578,6 +8606,10 @@ PrefabInstance:
     - target: {fileID: 5138006876902018972, guid: 4a7ac6c7947b4214cb0c74686ffb94ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883346212878609860, guid: 4a7ac6c7947b4214cb0c74686ffb94ed, type: 3}
+      propertyPath: m_Text
+      value: Be Seeing you soon...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
